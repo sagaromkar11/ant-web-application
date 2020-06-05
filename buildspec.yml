@@ -1,13 +1,15 @@
 version: 0.1
 build:
     commands:
-      - echo Build started on `date`
-      - ant -buildfile build-mt.xml -d compile prepare war
+      - echo Build started
+      - ant -buildfile build-mt.xml
       - mkdir build-output
       - cp -R dist/ build-output
+      - cd /build-output
+      - ll
 post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed
       - mv build-output/* ./
 artifacts:
   files:
