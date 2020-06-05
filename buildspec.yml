@@ -1,7 +1,7 @@
 version: 0.1
 build:
     commands:
-      - ant
+      - ant init
 #      - mkdir build-output
 #      - cp -R dist/ build-output
 #      - cd /build-output
