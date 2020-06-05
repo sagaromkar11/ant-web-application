@@ -1,19 +1,19 @@
 version: 0.1
-build:
-    commands:
-      - echo Build started
-      - ant
-      - mkdir build-output
-      - cp -R dist/ build-output
-      - cd /build-output
-      - ll
+#build:
+#    commands:
+#      - echo Build started
+#      - ant
+#      - mkdir build-output
+#      - cp -R dist/ build-output
+#      - cd /build-output
+#      - ll
 post_build:
     commands:
       - echo Build completed
-      - mv build-output/* ./
+#      - mv build-output/* ./
 artifacts:
   files:
-    - ant-web-application.war
+    - dist/ant-web-application.war
     - appspec.yml
     - start_application.bash
     - stop_application.bash
