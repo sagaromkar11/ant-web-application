@@ -2,7 +2,7 @@ version: 0.1
 build:
     commands:
       - echo Build started on `date`
-      - ant -d compile prepare war
+      - ant -buildfile build-mt.xml -d compile prepare war
       - mkdir build-output
       - cp -R dist/ build-output
 post_build:
