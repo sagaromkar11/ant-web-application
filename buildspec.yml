@@ -1,15 +1,11 @@
 version: 0.1
-build:
-    commands:
-      - ant init
-#      - mkdir build-output
-#      - cp -R dist/ build-output
-#      - cd /build-output
-#      - ll
-post_build:
-    commands:
-      - echo Build completed
-#      - mv build-output/* ./
+phases:
+    build:
+        commands:
+          - ant
+    post_build:
+        commands:
+          - echo Build completed
 artifacts:
   files:
     - dist/ant-web-application.war
