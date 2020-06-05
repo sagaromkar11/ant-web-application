@@ -3,12 +3,15 @@ build:
     commands:
       - echo Build started on `date`
       - ant
+      - mkdir build-output
+      - cp -R dist/ build-output
 post_build:
     commands:
       - echo Build completed on `date`
+      - mv build-output/* ./
 artifacts:
   files:
-    - dist/ant-web-application.war
+    - ant-web-application.war
     - appspec.yml
     - start_application.bash
     - stop_application.bash
