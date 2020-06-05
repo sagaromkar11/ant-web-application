@@ -1,0 +1,15 @@
+version: 0.1
+build:
+    commands:
+      - echo Build started on `date`
+      - ant
+post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - dist/ant-web-application.war
+    - appspec.yml
+    - start_application.bash
+    - stop_application.bash
+  discard-paths: yes
